@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* this are styling for the body  */
+        body{
+
+            font-family: Arial, Helvetica, sans-serif;
+            background:linear-gradient(to right, #0abcf9,#e541e7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+
+        }
+
+        /* styling for the container */
+        .box-container{
+
+            background-color: #fff;
+            padding: 30px 25px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 10px  25px rgba(0, 0, 0, 0, 1);
+            transition: border 0.3s case;
+
+        }
+
+        /* styling for the form h2 */
+        .benard-form h2{
+
+            text-align: center;
+            margin-bottom: 20px;
+
+        }
+
+        .benard-form label{
+            margin-bottom: 15px;
+        }
+
+        /* styling for form input, label & textarea  */
+        .benard-form input,
+        .benard-form select,
+        .benard-form textarea{
+
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+
+        }
+
+
+        .benard-form textarea{
+
+            resize: vertical;
+            min-height: 20px;
+
+        }
+
+        /* styling for the form button */
+        .benard-form button[type="submit"]{
+
+            background: linear-gradient(to right, #7f2bec,#0abcf9);
+            color: #fff;
+            padding: 10px 110px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s case;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: bold;
+            margin-top: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            
+        }
+
+        .benard-form button[type="submit"] :hover{
+            opacity: 0.8;
+
+        }
+        snap{
+            content: "\2192";
+        }        
+    </style>
+    <!-- this is the title -->
+    <title>Customers Service Form</title>
+</head>
+<body>
+    <!-- this is a container to enclose the lables and inputes -->
+
+    <div class= "box-container">
+        <!-- this is the form -->
+
+        <form action="service_form.php"method="POST" class="benard-form">
+
+            <h2><b>Say Hello!</b></h2>
+            <!-- lable and input to enter name -->
+            <label for="name">Your Name </label><br>
+            <input type="text"id="name"name="name"placeholder="Enter your name"><br><br>
+
+            <!-- lable and input to enter the email -->
+            <label for="email">Email </label><br>
+            <input type="email"id="email"name="email"placeholder="Enter your email address"><br><br>
+
+            <!-- lable and input to enter the phone number -->
+            <label for="phone">Phone Number</label><br> 
+            <input type="tel"id="phone"name="phone"placeholder="Enter your phone number"><br><br>
+
+
+            <!-- this is used to select services you need -->
+            <label for="services">Needed services</label><br>
+            <select name="services" id="services"><br><br>
+
+             <h3><option value=""display selected>Choose Services</h3></option>
+             <option value="Installation">Installation</option>
+             <option value="Troubleshoot">Troubleshoot</option>
+             <option value="Networking">Networking</option>
+             <option value="CCTV Installation">CCTV Installation</option>
+             <option value="Web Manangement">Web Manangement</option>
+             <option value="Software Development">Software Development</option>
+             <option value="Hardware Repair">Hardware Repair</option>
+             <option value="System Upgrade">System Upgrade</option>
+             <option value="Data Recovery">Data Recovery</option>
+             <option value="Others">Others</option>
+
+            </select><br><br>
+            
+
+            <!-- this is used to select the appropriate budget -->
+            <label for="budget">Enter Your Budget (Ksh):</label>
+            <input type="number" id="budget" name="budget" placeholder="e.g., 1500" min="0">
+            <br><br>
+            
+            <!-- lable and textarea to enter the message -->
+
+             <label for="message">Message</label><br><br>
+             <textarea id="message"name="message"placeholder= "Your message here...."></textarea><br><br>
+            
+                <!-- this is the submit button -->
+             <button type="submit">Submit <snap>→</snap></button>
+             <br><br>  
+
+        </form>
+    </div>
+</body>
+</html>

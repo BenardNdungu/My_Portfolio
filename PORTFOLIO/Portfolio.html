@@ -526,6 +526,28 @@ section {
         padding: 2rem;
     }
 }
+.cv-download-btn {
+    margin-left: 2rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+    white-space: nowrap;
+}
+
+.cv-download-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .cv-download-btn {
+        display: none;
+    }
+}
 
     </style>
 </head>
@@ -535,14 +557,18 @@ section {
     <header class="header">
         <nav class="container nav-container">
             <div class="logo" data-aos="fade-down">
-                <a href="#hero">BENARD NDUNGU</a>
+                <a href="#hero">BENARD NDUNGU MOCHA</a>
             </div>
             <ul class="nav-menu">
+                <li data-aos="fade-down"><a href="#hero">Home</a></li>
                 <li data-aos="fade-down" data-aos-delay="100"><a href="#about">About</a></li>
                 <li data-aos="fade-down" data-aos-delay="200"><a href="#skills">Skills</a></li>
                 <li data-aos="fade-down" data-aos-delay="300"><a href="#projects">Projects</a></li>
                 <li data-aos="fade-down" data-aos-delay="400"><a href="#contact">Contact</a></li>
             </ul>
+                <a href="CURRICULUM VITAE.docx" download="BenardNdungu_CV.docx" class="cta-button cv-download-btn" style="margin-left: 2rem;">
+                    <i class="fas fa-download"></i> Download CV
+                </a>
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -557,8 +583,9 @@ section {
             <div class="container hero-content">
                 <img src="image.jpg" alt="Profile Picture" class="circle-image" data-aos="fade-up">
                 <h1 data-aos="fade-up" data-aos-delay="100">Hello, I'm <span>Benard</span>.</h1>
-                <p data-aos="fade-up" data-aos-delay="200">An enthusiastic software developer from Ruiru, Kenya, passionate about creating unique and visually appealing web applications.</p>
+                <p data-aos="fade-up" data-aos-delay="200">An enthusiastic software developer from Kiambu, Kenya, passionate about creating unique and visually appealing web applications.</p>
                 <a href="#projects" class="cta-button" data-aos="fade-up" data-aos-delay="300">View My Work</a>
+                <a href="#contact" class="cta-button" data-aos="fade-up" data-aos-delay="400" style="margin-left: 1rem;">Contact Me</a>
             </div>
         </section>
 
@@ -569,7 +596,10 @@ section {
                 <div class="about-content">
                     <div class="about-text" data-aos="fade-right" data-aos-delay="100">
                         <p>
-                            I am a dedicated software developer with a strong foundation in both front-end and back-end technologies. My journey in the tech world began with a curiosity for how computers and applications work, which quickly evolved into a passion for creating and solving problems through code. I thrive in collaborative environments, am constantly seeking to learn new skills, and quickly adapt to change and new challenges. My goal is to leverage my skills to build intuitive, efficient, and impactful digital experiences.
+                         I am a dedicated software developer with a strong foundation in both front-end and back-end technologies.
+                         My journey in the tech world began with a curiosity for how computers and applications work, which quickly evolved into a passion for creating 
+                         and solving problems through code. I thrive in collaborative environments, am constantly seeking to learn new skills, and quickly adapt to change and new challenges. 
+                         My goal is to leverage my skills to build intuitive, efficient, and impactful digital experiences.
                         </p>
                     </div>
                 </div>
@@ -594,8 +624,20 @@ section {
                     <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
                         <i class="fas fa-cloud"></i>
                         <h3>Interests</h3>
-                        <p>Cloud Computing, AI/ML</p>
+                        <p>Cloud Computing, AI</p>
                     </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools</h3>
+                        <p>Git, GitHub, XAMPP</p>
+                        <p>VS Code</p>
+                    </div>
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="500" width="100px" height="50px">
+                        <i class="fa-solid fa-video"></i>
+                        <h3>CCTV INSTALLATION</h3>
+                        <p>Video Management Systems (VMS), Open-source viewers </p>
+                        <a href="#" class="cta-button" style="margin-top: 1rem;" target="_blank" rel="noopener noreferrer">View Installation Projects</a>
+                       </div>
                 </div>
             </div>
         </section>
@@ -607,10 +649,9 @@ section {
                 <div class="education-card" data-aos="fade-up" data-aos-delay="100">
                     <h3>NIBS Technical College</h3>
                     <p><strong>Diploma in Information Communication Technology</strong></p>
+                    <p><strong>Year:</strong> 2025</p>
                     <p><strong>Certificate in Information Communication Technology</strong></p>
-                    <a href="CURRICULUM VITAE.docx" download="BenardNdungu_CV.docx" class="cta-button">
-                        <i class="fas fa-download"></i> Download CV
-                    </a>
+                    <p><strong>Year:</strong> 2023</p>
                 </div>
             </div>
         </section>
@@ -625,28 +666,30 @@ section {
                         <p>A dynamic form for customers to submit service requests with details, service choices, and budget, which are then stored in a database.</p>
                         <p class="tech-stack"><strong>Tech:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
                         <div class="project-links">
-                            <a href="https://github.com/Benard-ndungu/Service_Form" target="_blank" rel="noopener noreferrer">View Code</a>
+                            <a href="https://github.com/BenardNdungu/Benard-Ndungu-Service_Form.git" target="_blank" rel="noopener noreferrer">View Code</a>
                             <a href="#" class="demo-button" target="_blank" rel="noopener noreferrer">Live Demo</a>
                         </div>
                     </div>
-                    <!-- <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <h3>Project Two Title</h3>
-                        <p>A brief, compelling description of your second project. Highlight the problem it solves and its key features.</p>
-                        <p class="tech-stack"><strong>Tech:</strong> React, Node.js, MongoDB</p>
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <h3>ONLINE ASSIGNMENT MANAGEMNT SYSTEM</h3>
+                        <p>The Online Assignment Management System (OAMS) is a web-based platform that lets educators create, distribute, and manage student assignments online. 
+                            Students can submit their work digitally and get prompt feedback and grades. The system streamlines the assignment process, improves communication between teachers and students, and keeps submissions safe. Features like deadlines, notifications, plagiarism checks, and progress tracking help improve efficiency, transparency, and academic responsibility.</p>
+                        <p class="tech-stack"><strong>Tech:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
                         <div class="project-links">
-                            <a href="#" target="_blank" rel="noopener noreferrer">View Code</a>
+                            <a href="https://github.com/BenardNdungu/ONLINE-ASSIGNMENT-MANAGEMENT-SYSTEM-.git" target="_blank" rel="noopener noreferrer">View Code</a>
                             <a href="#" class="demo-button" target="_blank" rel="noopener noreferrer">Live Demo</a>
                         </div>
                     </div>
                     <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                        <h3>Project Three Title</h3>
-                        <p>A brief, compelling description of your third project. Highlight the problem it solves and its key features.</p>
-                        <p class="tech-stack"><strong>Tech:</strong> Java, Spring Boot, PostgreSQL</p>
+                        <h3> SCHOOL FINDER</h3>
+                        <p>A School Finder is an online tool that helps users search for schools based on location, level, performance, facilities, and more. 
+                            It offers detailed profiles of schools, compares choices, and assists parents or students in picking the best school. The system makes education information easier to access and simplifies the decision-making process.</p>
+                        <p class="tech-stack"><strong>Tech:</strong> HTML, CSS, JavaScript, PHP, mapping APIs</p>
                         <div class="project-links">
-                            <a href="#" target="_blank" rel="noopener noreferrer">View Code</a>
+                            <a href="https://github.com/BenardNdungu/School-Finder.git" target="_blank" rel="noopener noreferrer">View Code</a>
                             <a href="#" class="demo-button" target="_blank" rel="noopener noreferrer">Live Demo</a>
                         </div>
-                    </div>-->
+                    </div>
                 </div>
             </div>
         </section>
@@ -655,6 +698,7 @@ section {
         <section id="contact" class="contact">
             <div class="container">
                 <h2 class="section-title" data-aos="fade-up">Get in Touch</h2>
+            
                 <form id="contact-form" class="contact-form" data-aos="fade-up" data-aos-delay="100">
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -671,6 +715,7 @@ section {
                     <button type="submit" class="submit-button">Send Message</button>
                     <p id="form-status"></p>
                 </form>
+
             </div>
         </section>
     </main>
@@ -680,11 +725,13 @@ section {
         <div class="container">
             <div class="social-links">
                 <a href="https://github.com/Benard-ndungu" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/benard-ndungu" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/benard-mocha-214650382/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:benardndungu45@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                <a href="https://twitter.com/your_handle" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <P><i class="fas fa-phone"></i>+254-790-863-446 </P>
             </div>
             <p>&copy; 2025 Benard Ndungu. All Rights Reserved.</p>
+            
+
         </div>
     </footer>
 
